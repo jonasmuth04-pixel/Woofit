@@ -8,60 +8,169 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 720px;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #FFFBF5;
+        }
+        .header {
+            text-align: center;
+            padding: 48px 24px 32px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .header a.back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: #FF9500;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .header a.back:hover { opacity: 0.8; }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+        .header .subtitle {
+            font-size: 15px;
+            color: #888;
+            margin-top: 6px;
+        }
+        .content {
+            max-width: 640px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background: #fff;
+            padding: 32px 24px 64px;
         }
-        h1 { font-size: 28px; margin-bottom: 8px; }
-        h2 { font-size: 20px; margin-top: 32px; margin-bottom: 8px; }
-        p, li { font-size: 15px; color: #555; margin-bottom: 12px; }
-        ul { padding-left: 20px; }
-        .subtitle { font-size: 15px; color: #999; margin-bottom: 32px; }
-        a { color: #007AFF; text-decoration: none; }
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 14px;
+        }
         .contact-card {
-            background: #F5F5F7;
-            border-radius: 12px;
+            background: #fff;
+            border-radius: 14px;
             padding: 24px;
-            margin-top: 16px;
+            margin: 20px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            text-align: center;
         }
-        .contact-card a { font-weight: 600; }
+        .contact-card .email-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .contact-card a.email-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF9500, #FF6B00);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 12px 32px;
+            border-radius: 12px;
+            margin-top: 8px;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .contact-card a.email-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(255, 149, 0, 0.3);
+            text-decoration: none;
+        }
+        .contact-card .response-time {
+            font-size: 13px;
+            color: #999;
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .faq-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #1a1a1a;
+        }
+        .faq-item p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        a { color: #FF9500; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 13px;
+            color: #aaa;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        footer a { color: #999; margin: 0 12px; }
     </style>
 </head>
 <body>
-    <h1>Support</h1>
-    <p class="subtitle">We're here to help you and your furry friend.</p>
-
-    <h2>Contact Us</h2>
-    <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
-    <div class="contact-card">
-        <p><strong>Email:</strong> <a href="mailto:jonas.muth@yahoo.de?subject=Woofit%20Support">jonas.muth@yahoo.de</a></p>
-        <p style="margin-bottom: 0;">We typically respond within 48 hours.</p>
+    <div class="header">
+        <a href="index.html" class="back">‹ Woofit</a>
+        <h1>Support</h1>
+        <p class="subtitle">We're here to help you and your furry friend.</p>
     </div>
 
-    <h2>Frequently Asked Questions</h2>
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
 
-    <h3 style="font-size: 16px; margin-top: 20px; margin-bottom: 4px;">How do I add a new dog?</h3>
-    <p>Go to Settings and tap "Add Dog". Fill in your dog's name, breed, date of birth, and weight to get started.</p>
+        <div class="contact-card">
+            <div class="email-icon">💬</div>
+            <a href="mailto:jonas.muth@yahoo.de?subject=Woofit%20Support" class="email-link">Email Support</a>
+            <p class="response-time">We typically respond within 48 hours.</p>
+        </div>
 
-    <h3 style="font-size: 16px; margin-top: 20px; margin-bottom: 4px;">Is my data safe?</h3>
-    <p>Yes. All your data is stored in your private iCloud account using Apple's CloudKit. We don't operate our own servers and never have access to your personal data.</p>
+        <h2>Frequently Asked Questions</h2>
 
-    <h3 style="font-size: 16px; margin-top: 20px; margin-bottom: 4px;">Can I share my dog's profile with family members?</h3>
-    <p>Absolutely! In Settings, tap "Share" next to your dog's name. The other person can join by tapping "Join a Shared Dog" in their Settings.</p>
+        <div class="faq-item">
+            <h3>🐕 How do I add a new dog?</h3>
+            <p>Go to Settings and tap "Add Dog". Fill in your dog's name, breed, size, and age group to get started with a personalized health plan.</p>
+        </div>
 
-    <h3 style="font-size: 16px; margin-top: 20px; margin-bottom: 4px;">How do I manage my subscription?</h3>
-    <p>Go to Settings > Manage Subscription. You can also manage it through the App Store under your Apple ID settings.</p>
+        <div class="faq-item">
+            <h3>🔒 Is my data safe?</h3>
+            <p>Yes. All your data is stored in your private iCloud account using Apple's CloudKit. We don't operate our own servers and never have access to your personal data.</p>
+        </div>
 
-    <h3 style="font-size: 16px; margin-top: 20px; margin-bottom: 4px;">How do I delete my data?</h3>
-    <p>You can delete individual dogs from Settings by swiping left, or use "Delete All Data" in Settings > Data to remove everything.</p>
+        <div class="faq-item">
+            <h3>👨‍👩‍👦 Can I share my dog's profile with family?</h3>
+            <p>Absolutely! In Settings, tap "Share" next to your dog's name to generate a code. The other person can join by tapping "Join a Shared Dog" in their Settings.</p>
+        </div>
 
-    <h2>Resources</h2>
-    <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-    </ul>
+        <div class="faq-item">
+            <h3>💳 How do I manage my subscription?</h3>
+            <p>Go to Settings > Manage Subscription. You can also manage it through the App Store under your Apple ID settings.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>🗑️ How do I delete my data?</h3>
+            <p>You can delete individual dogs from Settings by swiping left. Uninstalling the App removes all local data. iCloud data is removed when you disable sync.</p>
+        </div>
+    </div>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <br><br>
+        &copy; 2026 Jonas Muth. All rights reserved.
+    </footer>
 </body>
 </html>

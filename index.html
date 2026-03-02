@@ -3,36 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Woofit</title>
+    <title>Woofit - Daily health rings for your dog</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            background: #FFFBF5;
+            color: #1a1a1a;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 24px 48px;
+        }
+        .app-icon {
+            width: 88px;
+            height: 88px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #FF9500, #FF6B00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 44px;
+            box-shadow: 0 8px 32px rgba(255, 149, 0, 0.25);
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            font-size: 17px;
+            color: #666;
+            max-width: 320px;
+            margin: 0 auto 48px;
+            line-height: 1.5;
+        }
+        .rings {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        .ring {
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 8px;
+        }
+        .ring-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 4px solid;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            background: #f9f9f9;
-            color: #333;
+            font-size: 20px;
         }
-        h1 { font-size: 32px; margin-bottom: 8px; }
-        p { font-size: 16px; color: #888; margin-bottom: 32px; }
-        a {
-            display: block;
-            color: #007AFF;
+        .ring-circle.move { border-color: #34C759; background: rgba(52, 199, 89, 0.08); }
+        .ring-circle.nourish { border-color: #FF9500; background: rgba(255, 149, 0, 0.08); }
+        .ring-circle.care { border-color: #007AFF; background: rgba(0, 122, 255, 0.08); }
+        .ring-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #fff;
+            border-radius: 14px;
             text-decoration: none;
-            font-size: 17px;
-            margin: 8px 0;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
-        a:hover { text-decoration: underline; }
+        .nav-links a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .nav-links a .arrow {
+            color: #ccc;
+            font-size: 14px;
+        }
+        .nav-links a .link-icon {
+            margin-right: 12px;
+            font-size: 18px;
+        }
+        footer {
+            text-align: center;
+            padding: 48px 24px 32px;
+            font-size: 13px;
+            color: #aaa;
+        }
     </style>
 </head>
 <body>
-    <h1>Woofit</h1>
-    <p>Daily health rings for a longer, happier life.</p>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-    <a href="eula.html">End User License Agreement (EULA)</a>
+    <div class="hero">
+        <div class="app-icon">🐾</div>
+        <h1>Woofit</h1>
+        <p class="tagline">Daily health rings for a longer, happier life.</p>
+
+        <div class="rings">
+            <div class="ring">
+                <div class="ring-circle move">🏃</div>
+                <span class="ring-label">Move</span>
+            </div>
+            <div class="ring">
+                <div class="ring-circle nourish">🍖</div>
+                <span class="ring-label">Nourish</span>
+            </div>
+            <div class="ring">
+                <div class="ring-circle care">💙</div>
+                <span class="ring-label">Care</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav-links">
+        <a href="support.html">
+            <span><span class="link-icon">💬</span>Support</span>
+            <span class="arrow">›</span>
+        </a>
+        <a href="privacy.html">
+            <span><span class="link-icon">🔒</span>Privacy Policy</span>
+            <span class="arrow">›</span>
+        </a>
+        <a href="terms.html">
+            <span><span class="link-icon">📄</span>Terms of Service</span>
+            <span class="arrow">›</span>
+        </a>
+    </nav>
+
+    <footer>
+        &copy; 2026 Jonas Muth. All rights reserved.
+    </footer>
 </body>
 </html>

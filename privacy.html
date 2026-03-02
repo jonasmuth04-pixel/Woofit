@@ -8,65 +8,148 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: #fff;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #FFFBF5;
         }
-        h1 { font-size: 28px; margin-bottom: 8px; }
-        h2 { font-size: 20px; margin-top: 32px; margin-bottom: 8px; }
-        p, li { font-size: 15px; color: #555; margin-bottom: 12px; }
-        ul { padding-left: 20px; }
-        .updated { font-size: 13px; color: #999; margin-bottom: 32px; }
-        a { color: #007AFF; text-decoration: none; }
+        .header {
+            text-align: center;
+            padding: 48px 24px 32px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .header a.back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: #FF9500;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .header a.back:hover { opacity: 0.8; }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+        .header .updated {
+            font-size: 13px;
+            color: #999;
+            margin-top: 6px;
+        }
+        .content {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 32px 24px 64px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+        p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 14px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 14px;
+        }
+        li {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .highlight-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            border-left: 4px solid #34C759;
+        }
+        .highlight-card p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #333;
+        }
+        a { color: #FF9500; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 13px;
+            color: #aaa;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        footer a { color: #999; margin: 0 12px; }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: February 22, 2026</p>
+    <div class="header">
+        <a href="index.html" class="back">‹ Woofit</a>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: February 22, 2026</p>
+    </div>
 
-    <h2>Overview</h2>
-    <p>Woofit ("the App") is developed by Jonas Muth. This Privacy Policy explains how we collect, use, and protect your information when you use the App. We are committed to safeguarding your privacy and handling your data responsibly.</p>
+    <div class="content">
+        <div class="highlight-card">
+            <p>🔒 Your data stays on your devices and in your private iCloud account. We don't run servers, don't track you, and don't sell your data.</p>
+        </div>
 
-    <h2>Data We Collect</h2>
-    <p>The App collects only the data you voluntarily enter, including:</p>
-    <ul>
-        <li>Dog profile information (name, breed, date of birth, weight)</li>
-        <li>Health records and log entries (symptoms, vet visits, medications, meals, activities)</li>
-        <li>Photos you attach to your dog's profile or log entries</li>
-        <li>Reminder and notification preferences</li>
-        <li>Subscription status</li>
-    </ul>
-    <p>We do not collect analytics, usage statistics, or any data beyond what you explicitly provide.</p>
+        <h2>Overview</h2>
+        <p>Woofit ("the App") is developed by Jonas Muth. This Privacy Policy explains how we collect, use, and protect your information when you use the App. We are committed to safeguarding your privacy and handling your data responsibly.</p>
 
-    <h2>iCloud Sync (CloudKit)</h2>
-    <p>Your data is synced across your devices using Apple's CloudKit service. This means your information is stored in your private iCloud account and is governed by Apple's privacy policies. We do not operate our own servers and do not have direct access to your CloudKit data.</p>
-    <p>If you use the sharing feature to share a dog's profile with another person, only the data related to that specific dog is shared via a CloudKit shared zone. Both parties can see and edit the shared dog's information.</p>
+        <h2>Data We Collect</h2>
+        <p>The App collects only the data you voluntarily enter, including:</p>
+        <ul>
+            <li>Dog profile information (name, breed, date of birth, weight)</li>
+            <li>Health records and log entries (symptoms, vet visits, medications, meals, activities)</li>
+            <li>Photos you attach to your dog's profile or log entries</li>
+            <li>Reminder and notification preferences</li>
+            <li>Subscription status</li>
+        </ul>
+        <p>We do not collect analytics, usage statistics, or any data beyond what you explicitly provide.</p>
 
-    <h2>Photos</h2>
-    <p>Photos you add within the App are stored as part of your CloudKit data in your private iCloud account. Photos are not uploaded to any third-party server. If you revoke the App's photo library access, previously saved photos will remain in your iCloud data but the App will no longer be able to access new photos from your library.</p>
+        <h2>iCloud Sync (CloudKit)</h2>
+        <p>Your data is synced across your devices using Apple's CloudKit service. This means your information is stored in your private iCloud account and is governed by Apple's privacy policies. We do not operate our own servers and do not have direct access to your CloudKit data.</p>
+        <p>If you use the sharing feature to share a dog's profile with another person, only the data related to that specific dog is shared via a CloudKit shared zone. Both parties can see and edit the shared dog's information.</p>
 
-    <h2>Notifications</h2>
-    <p>If you enable reminders or smart notifications, the App schedules local notifications on your device. Notification tokens or preferences are stored locally and in your iCloud account. We do not use push notification services that route through our servers.</p>
+        <h2>Photos</h2>
+        <p>Photos you add within the App are stored as part of your CloudKit data in your private iCloud account. Photos are not uploaded to any third-party server. If you revoke the App's photo library access, previously saved photos will remain in your iCloud data but the App will no longer be able to access new photos from your library.</p>
 
-    <h2>Third-Party Sharing</h2>
-    <p>We do not sell, share, or disclose your personal data to any third parties. The App contains no third-party analytics, advertising SDKs, or tracking frameworks.</p>
+        <h2>Notifications</h2>
+        <p>If you enable reminders or smart notifications, the App schedules local notifications on your device. Notification tokens or preferences are stored locally and in your iCloud account. We do not use push notification services that route through our servers.</p>
 
-    <h2>Subscriptions</h2>
-    <p>Subscription purchases are processed entirely by Apple through the App Store. We receive confirmation of your subscription status but do not have access to your payment information, Apple ID, or billing details.</p>
+        <h2>Third-Party Sharing</h2>
+        <p>We do not sell, share, or disclose your personal data to any third parties. The App contains no third-party analytics, advertising SDKs, or tracking frameworks.</p>
 
-    <h2>Data Deletion</h2>
-    <p>You can delete any of your data at any time from within the App. Deleting a dog profile removes all associated health records, photos, and reminders. Uninstalling the App and disabling iCloud sync for the App will remove your data from Apple's servers in accordance with Apple's data retention policies.</p>
+        <h2>Subscriptions</h2>
+        <p>Subscription purchases are processed entirely by Apple through the App Store. We receive confirmation of your subscription status but do not have access to your payment information, Apple ID, or billing details.</p>
 
-    <h2>Children's Privacy</h2>
-    <p>The App does not knowingly collect data from children under 13. The App is intended for general audiences and tracks pet health information only.</p>
+        <h2>Data Deletion</h2>
+        <p>You can delete any of your data at any time from within the App. Deleting a dog profile removes all associated health records, photos, and reminders. Uninstalling the App and disabling iCloud sync for the App will remove your data from Apple's servers in accordance with Apple's data retention policies.</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be reflected within the App with an updated revision date. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
+        <h2>Children's Privacy</h2>
+        <p>The App does not knowingly collect data from children under 13. The App is intended for general audiences and tracks pet health information only.</p>
 
-    <h2>Contact</h2>
-    <p>If you have questions about this Privacy Policy, please contact us through the App Store listing for Woofit.</p>
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected within the App with an updated revision date. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this Privacy Policy, please contact us at <a href="mailto:jonas.muth@yahoo.de?subject=Woofit%20Privacy">jonas.muth@yahoo.de</a>.</p>
+    </div>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <br><br>
+        &copy; 2026 Jonas Muth. All rights reserved.
+    </footer>
 </body>
 </html>
